@@ -1,0 +1,6 @@
+{
+  "name": "PT. Heni Medika",
+  "description": "Company Profile PT. Heni Medika - Penyedia alat kesehatan, perlengkapan medis, dan solusi layanan kesehatan terpercaya di Indonesia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
