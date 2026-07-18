@@ -8,7 +8,7 @@ import ContactSection from './components/ContactSection';
 import InquiryList from './components/InquiryList';
 import { Inquiry, InquiryItem } from './types';
 import { companyDetails, products } from './data';
-import { ShieldCheck, CheckCircle } from 'lucide-react';
+import { ShieldCheck, CheckCircle, MessageCircle } from 'lucide-react';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>('dashboard');
@@ -362,6 +362,26 @@ export default function App() {
           </div>
         </div>
       )}
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href={`https://wa.me/${companyDetails.whatsapp.replace(/[^0-9]/g, '')}?text=Halo%20PT.%20Heni%20Medika,%20saya%20ingin%20berkonsultasi%20mengenai%20pengadaan%20alat%20kesehatan%20dan%20layanan%20kemitraan%20resmi.`}
+        target="_blank"
+        rel="noreferrer"
+        id="floating-whatsapp-btn"
+        className={`fixed right-6 z-40 bg-[#25D366] hover:bg-[#20ba5a] text-white p-3.5 rounded-full shadow-lg transition-all duration-300 flex items-center gap-2 group hover:scale-105 cursor-pointer ${
+          cart.length > 0 ? 'bottom-24' : 'bottom-6'
+        }`}
+      >
+        <span className="relative flex h-3.5 w-3.5">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-white"></span>
+        </span>
+        <MessageCircle className="w-5 h-5 fill-white text-[#25D366]" />
+        <span className="text-[10px] font-bold uppercase tracking-widest max-w-0 overflow-hidden group-hover:max-w-[200px] transition-all duration-500 ease-in-out whitespace-nowrap pl-0 group-hover:pl-1">
+          Hubungi WhatsApp
+        </span>
+      </a>
 
     </div>
   );
