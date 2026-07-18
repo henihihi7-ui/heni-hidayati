@@ -7,9 +7,9 @@ export const companyDetails = {
   foundedYear: '2018',
   foundingVision: 'Membangun ekosistem kesehatan nasional yang tangguh dengan meminimalkan hambatan akses terhadap teknologi medis berstandar emas, menjamin akurasi diagnosis medis demi menyelamatkan nyawa pasien, serta menjadi standar acuan kepatuhan regulasi alat kesehatan di Indonesia.',
   address: 'Jl. Medika Raya No. 45, Kuningan, Jakarta Selatan, DKI Jakarta 12950',
-  email: 'info@henimedika.co.id',
-  phone: '+62 (021) 555-8989',
-  whatsapp: '+62 812-3456-7890',
+  email: 'henihihi7@gmail.com',
+  phone: '082110124456',
+  whatsapp: '082110124456',
   operatingHours: 'Senin - Jumat: 08.00 - 17.00 WIB (Technical Emergency Service Siaga 24/7)',
   cdakbLicense: 'No. FK.01.01/VI/1280-e/2022',
 };
