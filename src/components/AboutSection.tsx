@@ -20,6 +20,92 @@ export default function AboutSection() {
   return (
     <div className="space-y-24">
       
+      {/* UAS STIE Ekadharma Indonesia Profile Section */}
+      <section id="uas-student-profile" className="bg-white p-6 sm:p-8 rounded-none border-2 border-navy relative overflow-hidden">
+        {/* Decorative corner sash */}
+        <div className="absolute top-0 right-0 bg-[#C5A880] text-navy font-mono text-[9px] font-black uppercase tracking-widest px-3 py-1.5 border-l border-b border-navy z-10">
+          UAS - 2026
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          {/* Left: Professional Face Photo */}
+          <div className="md:col-span-4 flex flex-col items-center">
+            <div className="w-48 h-56 rounded-none overflow-hidden border-2 border-navy p-1.5 bg-[#FBFBF9] shadow-sm relative group">
+              <img
+                src="/src/assets/images/tugas_pak_ali_uas_juli_2026.jpg"
+                alt="Foto Heni Hidayati"
+                className="w-full h-full object-cover filter contrast-[1.01] transition-transform duration-300 group-hover:scale-105"
+                referrerPolicy="no-referrer"
+                onError={(e) => {
+                  // Fallback to high-quality portrait of a professional student if uploaded file fails
+                  e.currentTarget.src = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400";
+                }}
+              />
+            </div>
+            <span className="text-[9px] font-mono font-bold text-slate-400 mt-2 uppercase tracking-widest text-center">
+              FOTO MAHASISWA ASLI
+            </span>
+          </div>
+
+          {/* Right: Academic details */}
+          <div className="md:col-span-8 space-y-6">
+            <div className="space-y-2">
+              <div className="inline-flex items-center gap-2 bg-[#E5E5E1]/40 border border-cream-border px-3 py-1 rounded-none text-navy">
+                <Icons.GraduationCap className="w-4 h-4 text-[#C5A880]" />
+                <span className="text-[10px] uppercase font-mono tracking-wider font-bold">Dokumen Ujian Akhir Semester (UAS)</span>
+              </div>
+              <h3 className="text-3xl font-editorial-serif font-black italic text-navy leading-tight">
+                Lembar Kinerja & Aplikasi Bisnis
+              </h3>
+              <p className="text-xs text-muted-text font-serif leading-relaxed">
+                Website interaktif Company Profile & Sistem Simulasi Anggaran Pengadaan PT. Heni Medika ini dirancang dan dikembangkan secara mandiri guna memenuhi persyaratan kelulusan akademik semester genap.
+              </p>
+            </div>
+
+            {/* Grid of Academic Identity */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-[#FBFBF9] border border-cream-border p-4 font-mono text-xs">
+              <div className="space-y-1">
+                <span className="text-[10px] text-slate-400 uppercase font-bold block">Nama Lengkap</span>
+                <span className="font-bold text-navy text-sm uppercase font-sans">Heni Hidayati</span>
+              </div>
+              <div className="space-y-1">
+                <span className="text-[10px] text-slate-400 uppercase font-bold block">Nomor Induk Mahasiswa (NIM)</span>
+                <span className="font-bold text-navy text-sm">12250012</span>
+              </div>
+              <div className="space-y-1 border-t sm:border-t-0 border-cream-border pt-2 sm:pt-0">
+                <span className="text-[10px] text-slate-400 uppercase font-bold block">Semester</span>
+                <span className="font-bold text-navy text-sm">Semester 2 (Dua)</span>
+              </div>
+              <div className="space-y-1 border-t sm:border-t-0 border-cream-border pt-2 sm:pt-0">
+                <span className="text-[10px] text-slate-400 uppercase font-bold block">Kelas Kuliah</span>
+                <span className="font-bold text-navy text-sm">Reguler C</span>
+              </div>
+              <div className="space-y-1 sm:col-span-2 border-t border-cream-border pt-3 mt-1">
+                <span className="text-[10px] text-slate-400 uppercase font-bold block">Mata Kuliah</span>
+                <span className="font-bold text-navy text-sm font-sans">Aplikasi Komputer Bisnis</span>
+              </div>
+              <div className="space-y-1 sm:col-span-2 border-t border-cream-border pt-3">
+                <span className="text-[10px] text-slate-400 uppercase font-bold block">Institusi Kampus</span>
+                <span className="font-bold text-navy text-sm font-sans">STIE Ekadharma Indonesia</span>
+              </div>
+            </div>
+
+            {/* Crucial Statement Paragraph */}
+            <div className="bg-navy text-[#FBFBF9] p-4 rounded-none border border-[#C5A880]/30 flex items-start gap-3.5 shadow-sm">
+              <Icons.ShieldCheck className="w-5 h-5 text-[#C5A880] shrink-0 mt-0.5" />
+              <div className="space-y-1">
+                <span className="text-[10px] font-mono uppercase font-bold text-[#C5A880] tracking-widest block">
+                  Pernyataan Akademik Resmi:
+                </span>
+                <p className="text-xs text-slate-200 font-serif leading-relaxed italic">
+                  "Website ini dibuat sebagai Ujian Akhir Semester Mata Kuliah Aplikasi Komputer Bisnis kampus STIE Ekadharma Indonesia."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Vision & Mission Section */}
       <section id="vision-mission" className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Vision Card */}

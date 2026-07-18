@@ -37,6 +37,11 @@ export default function App() {
     }
   }, []);
 
+  // Scroll to top on tab change
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [activeTab]);
+
   // Sync cart to localStorage
   const updateCartState = (newCart: InquiryItem[]) => {
     setCart(newCart);
@@ -201,7 +206,7 @@ export default function App() {
           <div className="space-y-4">
             <h4 className="text-[10px] font-bold text-white uppercase tracking-widest font-mono border-b border-slate-850 pb-2">Navigasi Profil</h4>
             <ul className="space-y-2 text-[11px]">
-              <li><button onClick={() => setActiveTab('dashboard')} className="hover:text-[#C5A880] cursor-pointer text-left transition-colors font-medium">Tentang Kami & Tim</button></li>
+              <li><button onClick={() => setActiveTab('dashboard')} className="hover:text-[#C5A880] cursor-pointer text-left transition-colors font-medium">Tentang Kami / About Us</button></li>
               <li><button onClick={() => setActiveTab('catalog')} className="hover:text-[#C5A880] cursor-pointer text-left transition-colors font-medium">Katalog Alat Kesehatan</button></li>
               <li><button onClick={() => setActiveTab('simulator')} className="hover:text-[#C5A880] cursor-pointer text-left transition-colors font-medium">Kalkulator Simulasi Anggaran</button></li>
               <li><button onClick={() => setActiveTab('partnership')} className="hover:text-[#C5A880] cursor-pointer text-left transition-colors font-medium">Pertanyaan Umum & Kontak</button></li>
@@ -233,8 +238,28 @@ export default function App() {
           </div>
         </div>
 
+        {/* Academic UAS Notice */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800/60 mt-10 pt-6">
+          <div className="bg-slate-900/60 border border-slate-800 p-5 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 rounded-none">
+            <div className="space-y-2 md:max-w-2xl">
+              <div className="text-[9px] text-[#C5A880] uppercase tracking-widest font-bold font-mono">
+                PENILAIAN AKADEMIK KAMPUS - UAS 2026
+              </div>
+              <p className="text-xs text-slate-300 font-serif leading-relaxed italic">
+                "Website ini dibuat sebagai Ujian Akhir Semester Mata Kuliah Aplikasi Komputer Bisnis kampus STIE Ekadharma Indonesia"
+              </p>
+            </div>
+            <div className="text-left text-xs font-mono text-slate-400 shrink-0 space-y-1 border-t md:border-t-0 md:border-l border-slate-800 pt-4 md:pt-0 pl-0 md:pl-6 w-full md:w-auto">
+              <div><span className="text-slate-500 font-bold">NAMA:</span> <span className="text-[#FBFBF9] font-sans font-bold">HENI HIDAYATI</span></div>
+              <div><span className="text-slate-500 font-bold">NIM:</span> <span className="text-slate-300">12250012</span></div>
+              <div><span className="text-slate-500 font-bold">KELAS:</span> <span className="text-slate-300">REGULER C (SEMESTER 2)</span></div>
+              <div className="text-[11px] text-[#C5A880] font-sans font-bold mt-1">STIE Ekadharma Indonesia</div>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom Credits */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800/60 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] text-slate-500 font-bold tracking-widest uppercase font-mono">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800/60 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] text-slate-500 font-bold tracking-widest uppercase font-mono">
           <div>
             PT. HENI MEDIKA © 2026. HAK CIPTA DILINDUNGI UNDANG-UNDANG.
           </div>
