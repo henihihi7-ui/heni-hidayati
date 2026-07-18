@@ -250,7 +250,12 @@ export default function ContactSection() {
             <a href={`mailto:${companyDetails.email}`} className="flex items-center gap-2 text-muted-text hover:text-navy">
               Email: {companyDetails.email}
             </a>
-            <a href={`https://wa.me/${companyDetails.whatsapp.replace(/[^0-9]/g, '')}`} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-navy hover:text-gold-accent font-bold">
+            <a 
+              href={`https://wa.me/${companyDetails.whatsapp.replace(/[^0-9]/g, '')}?text=Halo%20PT.%20Heni%20Medika,%20saya%20ingin%20berkonsultasi%20mengenai%20pengadaan%20alat%20kesehatan%20dan%20layanan%20kemitraan%20resmi.`} 
+              target="_blank" 
+              rel="noreferrer" 
+              className="flex items-center gap-2 text-navy hover:text-[#C5A880] font-bold transition-colors"
+            >
               WhatsApp: {companyDetails.whatsapp}
             </a>
           </div>
